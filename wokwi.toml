@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = 'build/GPIO-Keypad-Controller.uf2'
+elf = 'build/GPIO-Keypad-Controller.elf'

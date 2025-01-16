@@ -1,28 +1,34 @@
 {
   "version": 1,
-  "author": "Prof. Tiago Façanha",
+  "author": "Jackson Silva",
   "editor": "wokwi",
   "parts": [
     {
       "type": "board-pi-pico-w",
       "id": "pico",
-      "top": -108.85,
-      "left": 339.55,
-      "attrs": { "builder": "pico-sdk" }
+      "top": 15.95,
+      "left": -34.85,
+      "attrs": { "cyw43": "1", "builder": "pico-sdk" }
     },
-    { "type": "wokwi-membrane-keypad", "id": "keypad1", "top": -146, "left": -23.2, "attrs": {} }
+    {
+      "type": "wokwi-membrane-keypad",
+      "id": "keypad1",
+      "top": -194,
+      "left": -474.4,
+      "attrs": {}
+    }
   ],
   "connections": [
-    [ "pico:GP0", "$serialMonitor:RX", "", [] ],
-    [ "pico:GP1", "$serialMonitor:TX", "", [] ],
-    [ "keypad1:C4", "pico:GP1", "green", [ "v19.2", "h105.3", "v-297.6" ] ],
-    [ "keypad1:C3", "pico:GP2", "green", [ "v28.8", "h124.65", "v-96" ] ],
-    [ "keypad1:C2", "pico:GP3", "green", [ "v38.4", "h144", "v-19.2" ] ],
-    [ "keypad1:C1", "pico:GP4", "green", [ "v48", "h163.1", "v-9.6" ] ],
-    [ "keypad1:R4", "pico:GP5", "green", [ "v57.6", "h182.2", "v-278.4" ] ],
-    [ "keypad1:R3", "pico:GP6", "green", [ "v67.2", "h201.3", "v-9.6" ] ],
-    [ "keypad1:R2", "pico:GP7", "green", [ "v76.8", "h220.4", "v-268.8" ] ],
-    [ "keypad1:R1", "pico:GP8", "green", [ "v86.4", "h240", "v-28.8" ] ]
+    ["pico:GP0", "$serialMonitor:RX", "", []],
+    ["pico:GP1", "$serialMonitor:TX", "", []],
+    ["keypad1:R1", "pico:GP1", "gold", ["v28.8", "h259.2", "v-124.8"]],
+    ["keypad1:R2", "pico:GP2", "gold", ["v38.4", "h258.8", "v-115.2"]],
+    ["keypad1:R3", "pico:GP3", "gold", ["v48", "h258.9", "v-115.2"]],
+    ["keypad1:R4", "pico:GP4", "gold", ["v57.6", "h259", "v-115.2"]],
+    ["keypad1:C1", "pico:GP5", "#8f4814", ["v67.2", "h259.1", "v-105.6"]],
+    ["keypad1:C2", "pico:GP6", "#8f4814", ["v76.8", "h259.2", "v-105.6"]],
+    ["keypad1:C3", "pico:GP7", "#8f4814", ["v86.4", "h259.05", "v-105.6"]],
+    ["keypad1:C4", "pico:GP8", "#8f4814", ["v96", "h258.9", "v-105.6"]]
   ],
   "dependencies": {}
 }

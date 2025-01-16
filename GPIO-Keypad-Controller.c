@@ -78,7 +78,7 @@ int main() {
     while (true) {
         char tecla = leitura_teclado();
         printf("Tecla pressionada: %c\n", tecla);
-        sleep_ms(100); // Estabilização
+        
 
 
         
@@ -100,6 +100,10 @@ int main() {
                 set_leds(0, 0, 0); // Desliga todos os LEDs
                 break;
     } 
+    
+    sleep_ms(100); // Estabilização
+
+    }
 
     return 0;
 }

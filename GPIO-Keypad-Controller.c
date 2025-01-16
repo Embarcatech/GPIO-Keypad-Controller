@@ -2,6 +2,9 @@
 #include "pico/stdlib.h"
 #include "hardware/timer.h"
 
+#LED_G_PIN 11 //PINO DO LED VERDE
+#LED_B_PIN 12 //PINO DO LED AZUL
+#LED_R_PIN 13 //PINO DO LED VERMELHO
 
 // Matrizes com nomes de colunas e linhas
 const uint LINHAS[4] = {1, 2, 3, 4};

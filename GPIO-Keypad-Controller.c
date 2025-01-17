@@ -67,11 +67,42 @@ int main() {
     
     // Inicializa o teclado
     iniciar_teclado();
+// Inicializa os LEDs
+    gpio_init(LED_R_PIN);
+    gpio_set_dir(LED_R_PIN, GPIO_OUT);
+    gpio_init(LED_G_PIN);  // inicia o verde
+    gpio_set_dir(LED_G_PIN, GPIO_OUT);
+    gpio_init(XXXXXXX);  // inicia o azul
+    gpio_set_dir(XXXXXXX, XXXXXXX);
 
     while (true) {
         char tecla = leitura_teclado();
         printf("Tecla pressionada: %c\n", tecla);
-        sleep_ms(100); // Estabilização
+        
+
+
+        
+        // Configuração dos LEDs com base na tecla pressionada
+        switch (tecla) {
+            case 'A':
+                set_leds(1, 0, 0); // Botão A acende o LED vermelho
+                break;
+            case 'B':
+                set_leds(x, x, x); // Botão B acende o LED azul
+                break;
+            case 'C':
+                set_leds(0, 1, 0); // Botão C acende o LED verde
+                break;
+            case 'D':
+                set_leds(1, 1, 1); // Botão D acende todos os LEDs
+                break;
+            default:
+                set_leds(0, 0, 0); // Desliga todos os LEDs
+                break;
+    } 
+    
+    sleep_ms(100); // Estabilização
+
     }
 
     return 0;

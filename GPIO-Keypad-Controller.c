@@ -61,6 +61,11 @@ char leitura_teclado() {
 
     return 0; // Nenhuma tecla pressionada
 }
+void set_leds(bool red, bool green, bool blue){ 
+    gpio_put(LED_R_PIN, red);
+    gpio_put(LED_G_PIN, green);
+    gpio_put(LED_B_PIN, blue);
+}
 
 int main() {
     stdio_init_all();

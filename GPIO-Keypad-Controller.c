@@ -73,7 +73,7 @@ int main() {
     // Inicializa o teclado
     iniciar_teclado();
 // Inicializa os LEDs
-    gpio_init(LED_R_PIN);
+    gpio_init(LED_R_PIN); //inicia o vermelho
     gpio_set_dir(LED_R_PIN, GPIO_OUT);
     gpio_init(XXXXXXXXX);  // inicia o verde
     gpio_set_dir(XXXXXXX,XXXXXX);

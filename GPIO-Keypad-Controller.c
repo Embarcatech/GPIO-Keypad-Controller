@@ -91,7 +91,7 @@ int main() {
                 set_leds(0, 1, 0); //Botão C acende o LED verde
                 break;
             case 'D':
-                set_leds (1,1,1);
+                set_leds (1,1,1); // Botão D acende todos os LEDS
                 break;
                 
             default:

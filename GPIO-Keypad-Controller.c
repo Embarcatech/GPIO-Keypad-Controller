@@ -29,11 +29,11 @@ void iniciar_teclado() {
         gpio_put(LINHAS[i], 0);
     }
 
-    // Definição das colunas como entradas com resistores de pull-down
+    // Definição das colunas como entradas com resistores de pull-up
     for (int i = 0; i < 4; i++) {
         gpio_init(COLUNAS[i]);
         gpio_set_dir(COLUNAS[i], GPIO_IN);
-        gpio_pull_down(COLUNAS[i]);
+        gpio_pull_up(COLUNAS[i]);
     }
 }
 

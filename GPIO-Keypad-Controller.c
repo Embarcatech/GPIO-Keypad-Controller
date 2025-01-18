@@ -40,7 +40,7 @@ void iniciar_teclado() {
 // Varredura do teclado e retorno da tecla pressionada
 char leitura_teclado() {
     for (int row = 0; row < 4; row++) {
-        // Coloca a linha atual em nível alto
+        // Coloca a linha atual em nível baixo
         gpio_put(LINHAS[row], 0);
 
         for (int col = 0; col < 4; col++) {
@@ -55,7 +55,7 @@ char leitura_teclado() {
             }
         }
 
-        // Coloca a linha atual novamente para nível baixo
+        // Coloca a linha atual novamente para nível alto
         gpio_put(LINHAS[row], 1);
     }
 

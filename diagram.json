@@ -6,8 +6,8 @@
     {
       "type": "board-pi-pico-w",
       "id": "pico",
-      "top": -118.45,
-      "left": 387.55,
+      "top": -118.00,
+      "left": 387.00,
       "attrs": { "builder": "pico-sdk" }
     },
     { "type": "wokwi-membrane-keypad", "id": "keypad1", "top": -146, "left": -23.2, "attrs": {} },

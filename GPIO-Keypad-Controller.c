@@ -47,7 +47,7 @@ char leitura_teclado() {
             // Verifica se a tecla foi pressionada
             if (!gpio_get(COLUNAS[col])) {
                 // Espera um tempo para estabilização da tecla pressionada
-                sleep_ms(50);
+                sleep_ms(150);
 
                 gpio_put(LINHAS[row], 1); // Reseta a linha atual
 

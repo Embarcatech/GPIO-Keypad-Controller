@@ -7,8 +7,8 @@
 #define LED_R_PIN 13 //PINO DO LED VERMELHO
 
 // Matrizes com nomes de colunas e linhas
-const uint LINHAS[4] = {1, 2, 3, 4};
-const uint COLUNAS[4] = {5, 6, 7, 8};
+const uint LINHAS[4] = {8, 7, 6, 5}; 
+const uint COLUNAS[4] = {4, 3, 2, 1};
 
 
 // Mapeamento das teclas em uma matriz 4x4
@@ -29,34 +29,34 @@ void iniciar_teclado() {
         gpio_put(LINHAS[i], 0);
     }
 
-    // Definição das colunas como entradas com resistores de pull-down
+    // Definição das colunas como entradas com resistores de pull-up
     for (int i = 0; i < 4; i++) {
         gpio_init(COLUNAS[i]);
         gpio_set_dir(COLUNAS[i], GPIO_IN);
-        gpio_pull_down(COLUNAS[i]);
+        gpio_pull_up(COLUNAS[i]);
     }
 }
 
 // Varredura do teclado e retorno da tecla pressionada
 char leitura_teclado() {
     for (int row = 0; row < 4; row++) {
-        // Coloca a linha atual em nível alto
-        gpio_put(LINHAS[row], 1);
+        // Coloca a linha atual em nível baixo
+        gpio_put(LINHAS[row], 0);
 
         for (int col = 0; col < 4; col++) {
             // Verifica se a tecla foi pressionada
-            if (gpio_get(COLUNAS[col])) {
+            if (!gpio_get(COLUNAS[col])) {
                 // Espera um tempo para estabilização da tecla pressionada
-                sleep_ms(50);
+                sleep_ms(150);
 
-                gpio_put(LINHAS[row], 0); // Reseta a linha atual
+                gpio_put(LINHAS[row], 1); // Reseta a linha atual
 
                 return teclas[row][col];
             }
         }
 
-        // Coloca a linha atual novamente para nível baixo
-        gpio_put(LINHAS[row], 0);
+        // Coloca a linha atual novamente para nível alto
+        gpio_put(LINHAS[row], 1);
     }
 
     return 0; // Nenhuma tecla pressionada

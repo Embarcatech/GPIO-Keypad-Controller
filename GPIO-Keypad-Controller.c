@@ -41,22 +41,22 @@ void iniciar_teclado() {
 char leitura_teclado() {
     for (int row = 0; row < 4; row++) {
         // Coloca a linha atual em nível alto
-        gpio_put(LINHAS[row], 1);
+        gpio_put(LINHAS[row], 0);
 
         for (int col = 0; col < 4; col++) {
             // Verifica se a tecla foi pressionada
-            if (gpio_get(COLUNAS[col])) {
+            if (!gpio_get(COLUNAS[col])) {
                 // Espera um tempo para estabilização da tecla pressionada
                 sleep_ms(50);
 
-                gpio_put(LINHAS[row], 0); // Reseta a linha atual
+                gpio_put(LINHAS[row], 1); // Reseta a linha atual
 
                 return teclas[row][col];
             }
         }
 
         // Coloca a linha atual novamente para nível baixo
-        gpio_put(LINHAS[row], 0);
+        gpio_put(LINHAS[row], 1);
     }
 
     return 0; // Nenhuma tecla pressionada

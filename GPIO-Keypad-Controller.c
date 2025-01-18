@@ -7,8 +7,8 @@
 #define LED_R_PIN 13 //PINO DO LED VERMELHO
 
 // Matrizes com nomes de colunas e linhas
-const uint LINHAS[4] = {1, 2, 3, 4};
-const uint COLUNAS[4] = {5, 6, 7, 8};
+const uint LINHAS[4] = {8, 7, 6, 5}; 
+const uint COLUNAS[4] = {4, 3, 2, 1};
 
 
 // Mapeamento das teclas em uma matriz 4x4

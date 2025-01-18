@@ -72,11 +72,13 @@ int main() {
     
     // Inicializa o teclado
     iniciar_teclado();
-// Inicializa os LEDs
+    // Inicializa os LEDs
     gpio_init(LED_R_PIN); //inicia o vermelho
     gpio_set_dir(LED_R_PIN, GPIO_OUT);
     gpio_init(LED_G_PIN); //inicia o verde
     gpio_set_dir(LED_G_PIN, GPIO_OUT);
+    gpio_init(LED_B_PIN); //Inicia o Led azul
+    gpio_set_dir(LED_B_PIN, GPIO_OUT);
 
     while (true) {
         char tecla = leitura_teclado();
@@ -86,6 +88,9 @@ int main() {
         switch (tecla) {
             case 'A':
                 set_leds(1, 0, 0); // Botão A acende o LED vermelho
+                break;
+           case 'B':
+                set_leds(0, 0, 1); // Botão B acende o Led azul
                 break;
             case 'C':
                 set_leds(0, 1, 0); //Botão C acende o LED verde

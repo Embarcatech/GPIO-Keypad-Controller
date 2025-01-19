@@ -110,26 +110,26 @@ int main() {
         switch (tecla) {
             case 'A':
                 set_leds(1, 0, 0); // Botão A acende o LED vermelho
-                printf("Liganado o LED vermelho\n");
+                printf("Ligando o LED vermelho\n");
                 set_buzzer(1);     // Liga o buzzer
                 sleep_ms(200);     // Tempo do som do buzzer
                 break;
            case 'B':
                 set_leds(0, 0, 1); // Botão B acende o Led azul
-                printf("Liganado o LED azul\n");
+                printf("Ligando o LED azul\n");
 
                 set_buzzer(1);     // Liga o buzzer
                 sleep_ms(200);     // Tempo do som do buzzer
                 break;
             case 'C':
                 set_leds(0, 1, 0); //Botão C acende o LED verde
-                printf("Liganado o LED verde\n");
+                printf("Ligando o LED verde\n");
                 set_buzzer(1);     // Liga o buzzer
                 sleep_ms(200);     // Tempo do som do buzzer
                 break;
             case 'D':
                 set_leds (1,1,1); // Botão D acende todos os LEDS
-                printf("Liganado todos os LEDs\n");
+                printf("Ligando todos os LEDs\n");
                 set_buzzer(1);     // Liga o buzzer
                 sleep_ms(200);     // Tempo do som do buzzer
                 break;

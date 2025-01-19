@@ -8,9 +8,18 @@
 #define LED_R_PIN 13 //PINO DO LED VERMELHO
 #define BUZZER_PIN 21 // PINO DO BUZZER
 
-// Matrizes com nomes de colunas e linhas
+/*
+// Portas GPIO usadas no simulador WOKWI
+// Matrizes com nomes de colunas e linhas - GPIO 
 const uint LINHAS[4] = {8, 7, 6, 5}; 
 const uint COLUNAS[4] = {4, 3, 2, 1};
+*/
+
+// Matrizes com nomes de colunas e linhas - GPIO - BitDogLab
+const uint LINHAS[4] = {18, 19, 20, 4}; 
+const uint COLUNAS[4] = {16, 17, 9, 8};
+
+
 
 // Mapeamento das teclas em uma matriz 4x4
 char teclas[4][4] = {

@@ -11,6 +11,10 @@
 - Organização do vídeo ensaio final e envio do link para o repositório.
 
 ---
+# Video de apresentação deste projeto
+
+[Video de apresentação deste projeto](https://drive.google.com/file/d/1aoHDodgtcem5vyiYCWFKmKKA3Xvj7X4c/view?usp=sharing "Video de apresentação deste projeto")
+
 
 ## **Colaboradores e Divisão das Tarefas**
 
@@ -21,6 +25,10 @@
 5. **Controle do buzzer** - Sérgio Emílio
 6. **Testes e validação de cada componente** - Vinícius Kauan
 7. **Documentação inicial do `README.md`, instruções e detalhes básicos** - Arthur Alencar
+
+## **Simulador online**
+
+[Projeto no Simulador WOKWI](https://wokwi.com/projects/420095379931354113 "Projeto no Simulador WOKWI")
 
 ## Descrição Geral
 
@@ -43,14 +51,16 @@ Este projeto utiliza um teclado matricial 4x4 conectado a um Raspberry Pi Pico p
      - `B`: Liga o LED azul
      - `C`: Liga o LED verde
      - `D`: Liga todos os LEDs
-   - Outras teclas desligam os LEDs.
+     - `#`: Liga apenas o Buzzer
+   - Outras teclas ainda sem implementação.
 
 3. **Feedback Visual e Impressão**
 
    - Exibe no terminal a tecla pressionada.
    - Os LEDs indicam visualmente a interação do usuário.
+   - O Buzzer é ligado gerando um leve som
 
-## Requisitos de Hardware
+## Requisitos de Hardware para o projeto
 
 - **Microcontrolador:** Raspberry Pi Pico
 - **Teclado Matricial:** 4x4
@@ -59,14 +69,15 @@ Este projeto utiliza um teclado matricial 4x4 conectado a um Raspberry Pi Pico p
   - 1 LED verde
   - 1 LED azul
 - **Resistores:**
-  - Para os LEDs (220 Ω recomendados)
+  - Para os LEDs (220 Ω recomendados) - (Para ser usado no simulador e em prototipação)
   - Pull-up interno para as colunas do teclado
-- **Fios e Protoboard:** Para conexões
+- **Fios e Protoboard:** Para conexões externas a BitDogLab
 
 ## Diagrama de Conexão
 
 ### Teclado
 
+####
 - **Linhas:** GPIOs 8, 7, 6, 5 (como saída)
 - **Colunas:** GPIOs 4, 3, 2, 1 (como entrada)
 
@@ -101,7 +112,7 @@ LEDs:
 
 3. **Compile o código:**
 
-   - Certifique-se de que o SDK está instalado e funcionando corretamente.
+   - Certifique-se de que o SDK está instalado e funcionando corretamente no VSCode.
 
    ```bash
    Usando a extensão do Raspberry `Pi Pico Visual Studio Code extension`
@@ -134,13 +145,10 @@ LEDs:
 4. **Loop Principal:**
 
    - Monitora continuamente as teclas pressionadas.
-   - Atualiza os LEDs e imprime a tecla pressionada no terminal.
+   - Atualiza os LEDs e imprime a tecla pressionada na saida padrão.
 
 ## Como Usar
 
 1. Conecte o hardware de acordo com o diagrama de conexão.
 2. Carregue o código no Raspberry Pi Pico.
-3. Abra um terminal série para monitorar a saída (115200 baud).
-4. Pressione as teclas no teclado para interagir com os LEDs.
-
-##
+3. Pressione as teclas no teclado para interagir com os LEDs.

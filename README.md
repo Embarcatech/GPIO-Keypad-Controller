@@ -28,11 +28,11 @@ Este projeto utiliza um teclado matricial 4x4 conectado a um Raspberry Pi Pico p
 
 - Uso de GPIOs no Raspberry Pi Pico
 - Interação com teclados matriciais
-- Controle de LEDs RGB
+- Controle dos LEDs R,G,B `Os LEDs ligados ao GPIO 11,13,12`
 
 ## Funcionalidades
 
-1. **Mapeamento de Teclado 4x4**
+1. **Mapeamento de Teclado - Matriz de 4x4**
 
    - Teclas numeradas de `0` a `9` e caracteres especiais como `A`, `B`, `C`, `D`, `*` e `#`.
 
@@ -95,25 +95,26 @@ LEDs:
 2. **Clone o repositório do projeto:**
 
    ```bash
-   git clone https://github.com/seuusuario/teclado-led-pico.git
-   cd teclado-led-pico
+   git clone https://github.com/Embarcatech/GPIO-Keypad-Controller.git
+   cd GPIO-Keypad-Controller
    ```
 
 3. **Compile o código:**
 
-   - Certifique-se de que o CMake está instalado.
+   - Certifique-se de que o SDK está instalado e funcionando corretamente.
 
    ```bash
-   mkdir build
-   cd build
-   cmake ..
-   make
+   Usando a extensão do Raspberry `Pi Pico Visual Studio Code extension`
+   Siga os seguintes passos:
+   1. Clean CMake (Para garantir que o projetos sera compilado do zero)
+   2. Compile Project (Compilação dos binarios)
+   3. Run Project [USB] (Compila e copia o firmaware para placa automaticamente)
    ```
 
 4. **Carregue o binário no Pico:**
 
    - Conecte o Pico ao computador no modo bootloader.
-   - Copie o arquivo `.uf2` gerado para a unidade correspondente ao Pico.
+   - Copie o arquivo `.uf2` (Depois de compilado, copiar o ./build/GPIO-Keypad-Controller.uf2  para a Raspberry em modo bootsel).
 
 ## Funcionamento do Código
 

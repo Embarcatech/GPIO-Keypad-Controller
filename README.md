@@ -75,6 +75,8 @@ Este projeto utiliza um teclado matricial 4x4 conectado a um Raspberry Pi Pico p
 
 ## Diagrama de Conexão
 
+[![Mapa de conexões para este projeto](img/componentesconectados.jpg "Mapa de conexões para este projeto")](https://raw.githubusercontent.com/Embarcatech/GPIO-Keypad-Controller/refs/heads/main/img/componentesconectados.jpg "Mapa de conexões para este projeto")
+
 ### Teclado
 
 ####
